@@ -2,8 +2,8 @@
 
 while true; do
     action=$(osascript <<EOF
-button returned of (display dialog "Choose an action." \
-with title "Base64" \
+button returned of (display dialog "Welcome back, $USER" \
+with title "Base64 - Home" \
 buttons {"Encode","Decode","Quit"} \
 default button "Encode")
 EOF
@@ -14,7 +14,7 @@ EOF
     fi
 
     input=$(osascript <<EOF
-text returned of (display dialog "Enter text:" \
+text returned of (display dialog "Enter Base64 to convert" \
 with title "Base64 - $action" \
 default answer "" \
 buttons {"Cancel","OK"} \
